@@ -20,4 +20,4 @@ public class LoginPage extends BasePage{
         userName.sendKeys(usernameValue);
         password.sendKeys(passwordValue, Keys.ENTER);
     }
-    }
+ }
