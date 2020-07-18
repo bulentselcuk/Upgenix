@@ -10,24 +10,19 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-/**
- * It meant to be extended
- */
 public abstract class BasePage {
-    protected WebDriver driver = Driver.getDriver();
-    protected WebDriverWait wait = new WebDriverWait(driver, 20);
+    protected WebDriver driver=Driver.getDriver ();
+    protected WebDriverWait wait=new WebDriverWait ( driver, 20 );
 
-    @FindBy(tagName = "h1")
+    @FindBy(tagName="h1")
     protected WebElement pageLogo;
 
-
-    public String getPageLogoText() {
-        return pageLogo.getText();
+    public String getPageLogoText() { // use for login..
+        return pageLogo.getText ();
     }
-
 
     public BasePage() {
-        PageFactory.initElements(driver, this);
-    }
+        PageFactory.initElements ( driver, this );
 
+    }
 }
