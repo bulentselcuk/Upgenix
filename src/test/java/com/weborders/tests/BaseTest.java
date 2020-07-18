@@ -68,6 +68,7 @@ public abstract class BaseTest {
         } else if (testResult.getStatus() == ITestResult.SKIP) {
             extentTest.skip(testResult.getName());
         }
+
         BrowserUtilities.wait(3);
         Driver.closeDriver();
     }
