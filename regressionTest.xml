@@ -5,6 +5,7 @@
            <class name="com.weborders.tests.LoginTests"/>
             <class name="com.weborders.tests.ViewAllOrdersTest"/>
             <class name="com.weborders.tests.OrdersTest"/>
+            <class name="com.weborders.tests.ViewAllProductsTest"></class>
         </classes>
     </test>
 </suite>
