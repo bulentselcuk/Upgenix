@@ -12,6 +12,8 @@ public class LoginPage extends BasePage{
     private WebElement userName;
     @FindBy(id="ctl00_MainContent_password")
     private WebElement password;
+    @FindBy(tagName = "h2")
+    private WebElement subTitle;
 
     public void login() { // Orginal way...
         BrowserUtilities.wait(2);
@@ -19,5 +21,10 @@ public class LoginPage extends BasePage{
         String passwordValue = ConfigurationReader.getProperty("password");
         userName.sendKeys(usernameValue);
         password.sendKeys(passwordValue, Keys.ENTER);
+    }
+
+    public String getTextOfSubTitle() {
+        BrowserUtilities.wait(2);
+        return subTitle.getText();
     }
  }

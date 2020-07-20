@@ -15,13 +15,13 @@ public class ViewAllProductsTest extends BaseTest{
         LoginPage loginPage=new LoginPage ();
         loginPage.login ();
 
-        ViewAllProductsPage vap=new ViewAllProductsPage();
-        vap.viewAllProductsClick.click();
+        ViewAllProductsPage viewAllProductsPage=new ViewAllProductsPage();
+        viewAllProductsPage.viewAllProductsClick.click();
 
         BrowserUtilities.wait ( 2 );
 
         String expectedSubtitle = "List of Products";
-        String actualSubtitle = vap.listOfProducts.getText();
+        String actualSubtitle = viewAllProductsPage.listOfProducts.getText();
 
         Assert.assertEquals(actualSubtitle,expectedSubtitle, "List of Products");
 
@@ -35,11 +35,11 @@ public class ViewAllProductsTest extends BaseTest{
         LoginPage loginPage = new LoginPage();
         loginPage.login();
 
-        ViewAllProductsPage vap=new ViewAllProductsPage();
-        vap.viewAllProductsClick.click();
+        ViewAllProductsPage viewAllProductsPage=new ViewAllProductsPage();
+        viewAllProductsPage.viewAllProductsClick.click();
 
 
-        String actual = vap.Table.getText();
+        String actual = viewAllProductsPage.Table.getText();
         String expected = "Product name";
 
         Assert.assertTrue(actual.equals(expected));
